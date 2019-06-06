@@ -32,10 +32,7 @@ a{
 header{
     padding-bottom: 3vmin;
 }
-.main-menu{
-    display: flex;
-    justify-content: space-between;
-}
+
 .navbar-brand{
     padding-bottom: 0;
 }
@@ -444,7 +441,7 @@ padding-bottom: 1vmin;
 .send-form__message::placeholder,.send-form__email::placeholder,.send-form__name::placeholder{
     padding-top: 1vmin;
     padding-left: 1vmin;
-    font-size: 1vmax;
+    font-size: 1.25vmax;
 }
 .send-form__button {
     padding: 0.75vmin 5vmin;
