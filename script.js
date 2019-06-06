@@ -27,10 +27,33 @@ $(document).ready(function() {
     }
   ]
 });
-$('.clients__slider').slick({
+   $('.clients__slider').slick({
   dots:false
    });
 
+   $('.related-posts__slider').slick({
+    dots:true,
+    arrows: false,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 790,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        }
+      },
+      {
+        breakpoint: 550,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      }
+    ]
+     });
    
 
 });
