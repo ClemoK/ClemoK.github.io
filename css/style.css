@@ -36,22 +36,23 @@ header{
 .navbar-brand{
     padding-bottom: 0;
 }
-.header__nav{
+.header-nav{
     display: flex;
     flex-direction: row;
    
 }
-.header__nav a:first-of-type{
+.header-nav a:first-of-type{
     padding-right: 2vmin;
 }
 .header-logo{
     font-size: 3.9vmin;
+    font-weight: bold;
 }
 .header-logo span{
     font-size: 7vmin;
    line-height: 10px;
 }
-.header__nav a{
+.header-nav a{
     font-size: 2.3vmin;
     padding-bottom: 0;
 }
@@ -145,7 +146,7 @@ align-items: flex-end;
 /*.............. 
    WHAT WE DO
 ................*/
-.what__we__do-title h2{
+.what-we-do__title h2{
     font-size: 7vmin;
     font-weight: 300;
     text-align: center;
@@ -153,7 +154,7 @@ align-items: flex-end;
     padding-bottom: 7vmin;
     color: #454545;
 }
-.what__we__do__photo{
+.what-we-do__photo{
     height: auto; 
     width: 100%;
     max-width: 560px;
@@ -170,22 +171,22 @@ margin-bottom: 7vmin;
 }
 
 
-.what__we__do__text{
+.what-we-do__text{
     padding-right: 0;
 }
-.what__we__do__text h2{
+.what-we-do__text h2{
     font-size: 3.3vmin;
    line-height: 1.1vmin;
    transition: all .5s;
 }
-.what__we__do__text h2:hover{
+.what-we-do__text h2:hover{
  color:  #ffba66;
 }
-.what__we__do__text strong{
+.what-we-do__text strong{
     font-size: 5.5vmin;
     line-height: 9vmin;
 }
-.what__we__do__text strong::after{
+.what-we-do__text strong::after{
     content: "";
     max-width:  55px;
    height: 0.2vmin;
@@ -194,11 +195,11 @@ margin-bottom: 7vmin;
    margin-top: 1vmin;
    margin-bottom: 2vmin;
 }
-.what__we__do__text p{
+.what-we-do__text p{
     color: #656565;
 font-size: 2.5vmin;     
 }
-.what__we__do__text p:nth-of-type(2){
+.what-we-do__text p:nth-of-type(2){
     padding-top: 2vmin;
     padding-bottom: 2vmin;
 }
@@ -307,11 +308,11 @@ font-weight: 700;
     padding-bottom: 7vmin;
     color: #454545;
 }
-.client__name h3{ 
+.clients__name h3{ 
     font-size: 5vmin;
     font-weight: 700;  
 }
-.client__name h3:after{
+.clients__name h3:after{
     content: "";
     max-width:  55px;
    height: 0.2vmin;
@@ -321,10 +322,10 @@ font-weight: 700;
   margin-left: auto;
 }
 
-.client__name span{
+.clients__name span{
     font-size: 2.5vmin;
 }
-.client__opinion p{
+.clients__opinion p{
     padding-top: 1.2vmin;
     font-size: 2.2vmin;
 }
@@ -342,7 +343,7 @@ font-weight: 700;
 /*................. 
    GET IN TOUCH  
 .................*/
-.get-in_touch{
+.get-in-touch{
     background: #000;
     color: #d2d2d2;
 }
@@ -357,22 +358,20 @@ font-weight: 700;
     padding-top: 7vmin; 
 }
 .contacts__info i{
-    padding-right: 2vmin;
     font-size: 1vmax;
+    padding-right: 1vw;
 }
 .contacts__info__item{
     padding-bottom: 2vmax;
 }
 .contacts__info__item span{
     font-size: 1vmax;
-}
-.address__item{
-    padding-left: 4vmin;
+    display: inline-flex;
+    flex-direction: column;
 }
 
-.socials i:nth-child(1),
-.socials i:nth-child(4)
-{
+
+.socials i{
     background: #d2d2d2;
     border-radius: 50%;
     color: #000;
@@ -380,21 +379,13 @@ font-weight: 700;
     padding: 0.8vmax 1vmax;
    
 }
-.socials i:nth-child(3){
-    background: #d2d2d2;
-    border-radius: 50%;
-    color: #000;
-    font-size: 2vmax;
-    padding: 0.8vmax 0.5vmax;
+.fa-google-plus-g{
+    padding: 0.8vmax 0.5vmax !important;
 }
-.socials i:nth-child(2),.socials i:nth-child(5){
-    background: #d2d2d2;
-    border-radius: 50%;
-    color: #000;
-    font-size: 2vmax;
-    padding: 0.8vmax;
+.fa-twitter{
+    padding: 0.8vmax 0.75vmax !important; 
 }
-.socials i{
+.socials a{
     margin-right: 2vmin;
     transition: all .2s;
 }
@@ -402,7 +393,7 @@ font-weight: 700;
     background-color: #ffe1bd; 
 
 }
-.socials i:last-child{
+.socials a:last-child{
     margin-right: 0;
 }
 .send-form__name, .send-form__email, .send-form__message{
@@ -432,7 +423,7 @@ padding-bottom: 1vmin;
 .send-form__message::placeholder,.send-form__email::placeholder,.send-form__name::placeholder{
     padding-top: 1vmin;
     padding-left: 1vmin;
-    font-size: 1.25vmax;
+    font-size: 1.4vw;
 }
 .send-form__button {
     padding: 0.75vmin 5vmin;
@@ -452,45 +443,51 @@ footer{
     padding: 4vmin 0;
 }
 .footer-title{
-    font-size: 3vmin;
+    font-size: 1.75vw;
 }
-
+.footer-rights {
+    font-size: 1.25vw;
+}
 
 
 
 /* MEDIA */
 
 @media(max-width:1085px){
-    .what__we__do__text p{
-        color: #656565;
+    .what-we-do__text p{
     font-size: 2.25vmin;     
     }
-    .client__opinion p{
+    .clients__opinion p{
         font-size: 1.9vmin;
     }
-    .address__item{
-        padding-left: 3.5vmin;
-    }
-   
 }
 @media(max-width:770px){
     .header__nav a{
         font-size: 1.9vmin;
     }
-    .client__opinion p{
+    .clients__opinion p{
         font-size: 1.5vmin;
     }
-    .contacts__info__item span{
-        font-size: 0.95vmax;
-    }
+  
 }
 @media(max-width:655px){
     .contacts__info__item span{
-        font-size: 0.82vmax;
+        font-size: 0.95vw;
     }
 }
 @media(max-width:575px){
-    .address__item{
-        padding-left: 0;
+    .contacts__info__item span{
+        font-size: 2.5vw;
+    }
+    .footer-title{
+        font-size: 18px;
+    }
+    .footer-rights {
+        font-size: 14px;
+    }
+    .send-form__message::placeholder,.send-form__email::placeholder,.send-form__name::placeholder{
+        font-size: 16px;
     }
 }
+
+
