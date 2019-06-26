@@ -32,12 +32,11 @@ header{
 .navbar-brand{
     padding-bottom: 0;
 }
-.header-nav{
+.header__nav{
     display: flex;
-    flex-direction: row;
-   
+    flex-direction: row;  
 }
-.header-nav a:first-of-type{
+.header__nav a:first-of-type{
     padding-right: 2vmin;
 }
 .header-logo{
@@ -48,8 +47,8 @@ header{
     font-size: 7vmin;
    line-height: 10px;
 }
-.header-nav a{
-    font-size: 2.5vmin;
+.header__nav a{
+    font-size: 2.3vmin;
     padding-bottom: 0;
 }
 
@@ -210,8 +209,11 @@ footer{
 }
 
 @media(max-width:770px){
-    .header__nav a{
-        font-size: 1.9vmin;
+    .header-nav a{
+        font-size: 2.2vmin;
+    }
+    .header-nav a:first-of-type{
+        padding-right: 1.5vmin;
     }
     .blog-inner__bold-title{
         font-size: 2.1vmax;

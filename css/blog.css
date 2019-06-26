@@ -1,0 +1,240 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+html{
+ overflow-x: hidden;	
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: #000000;
+}
+a:hover{
+    color: #000000;
+    text-decoration: none;
+}
+::selection {
+    background: #ffe1bd; 
+    }
+    ::-moz-selection {
+    background: #ffe1bd; 
+    }
+.container{
+    width: 82%;
+    padding: 0;
+}
+
+/*...............
+     HEADER 
+..............*/
+header{
+    padding-bottom: 3vmin;
+}
+
+.navbar-brand{
+    padding-bottom: 0;
+}
+.header-nav{
+    display: flex;
+    flex-direction: row;
+   align-self: center;
+}
+.header-nav a:first-of-type{
+    padding-right: 2vmin;
+}
+.header-logo{
+    font-size: 3.9vmin;
+    font-weight: bold;
+}
+.header-logo span{
+    font-size: 7vmin;
+   line-height: 10px;
+}
+.header-nav a{
+    font-size: 2.3vmin;
+    padding-bottom: 0;
+}
+.nav-link__blog::after{
+    content: "";
+    display: block;
+    width: 45%;
+    height: 0.3vmin;
+background-color: #000000;
+}
+
+/*.............. 
+     BLOG
+................*/
+.filter-controls{
+    list-style:none;
+    padding-bottom: 5vw;
+}
+.filter-controls li{
+    padding-right: 1vw;
+}
+.filter-button{
+    border: none;
+    background-color: transparent;
+    transition: all 0.1s;
+    color: #868686;
+    font-size: 2.75vmin;
+    outline:none;
+}
+.filter-button[val="on"]{
+    color: #000;
+}
+.filter-button:hover,
+.focused {
+   color: black;
+
+}
+.blog__title h2{
+    font-size: 8.25vmin;
+    font-weight: 300;
+    text-align: center;
+    padding-top: 6vmin;
+    padding-bottom: 6vmin;
+    color: #454545;
+}
+.blog__photo{
+    height: auto; 
+    width: 100%;
+    max-width: 560px;
+margin-bottom: 7vmin;
+}
+.kitchen{
+    padding-bottom: 10vmin;
+}
+.art-installation{
+    padding-bottom: 10vmin;
+}
+.design{
+    padding-bottom: 10vmin;
+}
+.filter{
+    list-style: none;
+}
+
+.blog__text{
+    padding-right: 0;
+}
+.blog__text h3{
+    font-size: 5.3vmin;
+   transition: all .5s;
+   font-weight: bold;
+   line-height: 5vmin;
+   padding-bottom: 1vmin;
+}
+.blog__text h3:hover{
+ color:  #ffba66;
+}
+.blog-inner__time{
+    font-weight: 500;
+    font-size: 2.5vmin;
+}
+.blog-inner__time::after{
+    content: "";
+    max-width:  55px;
+   height: 0.3vmin;
+   display: block;
+   background-color: #000000;
+   margin-top: 3vmin;
+   margin-bottom: 2vmin;
+}
+.blog__text p{
+    color: #656565;
+font-size: 2.5vmin;     
+}
+.blog__text p:last-of-type{
+    padding-top: 2vmin;
+    padding-bottom: 2vmin;
+}
+.button{
+    border-radius: 2.5vmin;
+    padding: 1vmin 3vmin;
+    border: none;
+}
+.button{
+    font-size: 1.25vmax;
+}
+.button-light{
+    background-color: #ffffff;
+    border: 1px solid rgba( 0, 0, 0, 0.35);
+    transition: all .2s;
+}
+.button-light:hover{
+    border: 1px solid rgba( 0, 0, 0, 1);
+}
+.button-dark{
+    background-color: #000000;
+    transition: all .5s;
+}
+.button-dark:hover{
+    background-color: #ffe1bd;
+}
+.button-dark {
+color: #ffffff;
+font-weight: lighter;
+transition: all .5s;
+}
+.button-dark:hover{
+  color: #000;
+ }
+ 
+ .blog__button{
+   margin-right: auto;
+   margin-left: auto;
+   margin-bottom: 10vmin;
+ }
+
+
+/*............ 
+   FOOTER
+.............*/
+footer{
+    padding: 4vmin 0;
+}
+.footer-title{
+    font-size: 1.75vw;
+}
+.footer-rights {
+    font-size: 1.25vw;
+}
+
+
+/* MEDIA */
+@media(max-width:1085px){
+    .what-we-do__text p{
+    font-size: 2.25vmin;     
+    }
+}
+@media(max-width:770px){
+    .header-nav a{
+        font-size: 2.2vmin;
+    }
+    .header-nav a:first-of-type{
+        padding-right: 1.5vmin;
+    }
+    .filter-button{
+        font-size: 16px;
+    }
+}
+
+@media(max-width:575px){
+    .footer-title{
+        font-size: 18px;
+    }
+    .footer-rights {
+        font-size: 14px;
+    }
+    .filter-button{
+        font-size: 14px;
+    }
+}

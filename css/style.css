@@ -462,8 +462,11 @@ footer{
     }
 }
 @media(max-width:770px){
-    .header__nav a{
-        font-size: 1.9vmin;
+    .header-nav a{
+        font-size: 2.2vmin;
+    }
+    .header-nav a:first-of-type{
+        padding-right: 1.5vmin;
     }
     .clients__opinion p{
         font-size: 1.5vmin;
