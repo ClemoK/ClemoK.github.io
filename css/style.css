@@ -6,6 +6,7 @@ body{
 }
 html{
  overflow-x: hidden;	
+    scroll-behavior: smooth;
 }
 *{
     margin: 0;
@@ -94,6 +95,15 @@ padding-bottom: 5vmin;
 .button{
     font-size: 1.25vmax;
 }
+.button-light:focus{
+    outline: 0;
+    border: 1px solid rgba( 0, 0, 0, 1);
+}
+.button-dark:focus{
+    outline: 0;
+    background-color: #ffe1bd;
+    color: #000;
+}
 .slider__button{
    margin-bottom: 12vmin;
 }
@@ -101,9 +111,7 @@ padding-bottom: 5vmin;
     background-color: #000000;
     transition: all .5s;
 }
-.button-dark:hover{
-    background-color: #ffe1bd;
-}
+
 .button-dark {
 color: #ffffff;
 font-weight: lighter;
@@ -111,6 +119,7 @@ transition: all .5s;
 }
 .button-dark:hover{
   color: #000;
+  background-color: #ffe1bd;
  }
 
 .slick-dots {
@@ -131,14 +140,14 @@ align-items: flex-end;
 
     width: 20px;
     height: 20px;
-    margin: 0 5px;
+    margin: 0.5vw 5px;
     padding: 0;
 
     cursor: pointer;
 }
 .slick-dots li button::before,
 .slick-dots li.slick-active button::before{
-    font-size: 2vmin; 
+    font-size: 18px; 
 }
 
 
@@ -387,8 +396,11 @@ font-weight: 700;
 }
 .socials a{
     margin-right: 2vmin;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
     transition: all .2s;
 }
+
 .socials i:hover{
     background-color: #ffe1bd; 
 
@@ -415,11 +427,7 @@ font-weight: 700;
 padding-bottom: 9vmin;
     resize: none;
 }
-.send-form__message::placeholder{
-display: block;
-border-bottom: 1px solid #333333;
-padding-bottom: 1vmin;
-}
+
 .send-form__message::placeholder,.send-form__email::placeholder,.send-form__name::placeholder{
     padding-top: 1vmin;
     padding-left: 1vmin;
@@ -430,7 +438,6 @@ padding-bottom: 1vmin;
     margin-top: 1vmax;
     margin-bottom: 7vmax;
     transition: all .3s;
-
 }
 .send-form__button:hover{
     background-color: #ffe1bd; 
@@ -449,6 +456,55 @@ footer{
     font-size: 1.25vw;
 }
 
+/* SCROLL UP */
+.text-shadow-pop-top{
+    transition: all 0.2s;
+}
+.text-shadow-pop-top:hover {
+	-webkit-animation: text-shadow-pop-top 0.6s both;
+      animation: text-shadow-pop-top 0.6s both;
+}
+@-webkit-keyframes text-shadow-pop-top {
+    0% {
+      text-shadow: 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555;
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      text-shadow: 0 -1px #555555, 0 -2px #555555, 0 -3px #555555, 0 -4px #555555, 0 -5px #555555, 0 -6px #555555;
+      -webkit-transform: translateY(6px);
+              transform: translateY(6px);
+    }
+  }
+  @keyframes text-shadow-pop-top {
+    0% {
+      text-shadow: 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555;
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      text-shadow: 0 -1px #555555, 0 -2px #555555, 0 -3px #555555, 0 -4px #555555, 0 -5px #555555, 0 -6px #555555;
+      -webkit-transform: translateY(6px);
+              transform: translateY(6px);
+    }
+  }
+#myBtn {
+    display: none; 
+    position: fixed; 
+    bottom: 20px; 
+    right: 1vmin; 
+    z-index: 99; 
+    border: none; 
+    outline: none; 
+    color: rgba(61, 226, 255, 0.877); 
+    cursor: pointer; 
+    background-color:transparent;
+    font-size: 55px; 
+    transition: all 0.2s;
+  }
+  
+  
+  
 
 
 /* MEDIA */
@@ -471,7 +527,9 @@ footer{
     .clients__opinion p{
         font-size: 1.5vmin;
     }
-  
+    #myBtn {
+        font-size: 45px; 
+      }
 }
 @media(max-width:655px){
     .contacts__info__item span{
@@ -491,6 +549,15 @@ footer{
     .send-form__message::placeholder,.send-form__email::placeholder,.send-form__name::placeholder{
         font-size: 16px;
     }
+    .send-form__button {
+        padding: 1.5vw 7vw;
+    }
+    .button{
+        font-size: 1.75vmax;
+    }
+    #myBtn {
+        font-size: 40px; 
+      }
 }
 
 
